@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.clear{
+    clear: both;
+}
+.title{
+    margin: 20px 0px;
+}
+.title h2{
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    color:#333333;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 30px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+
+.title h2::after{
+    content: "";
+    background-color: #FF2F5B;
+    width: 70%;
+    height: 1.5px;
+    position: absolute;
+    bottom: -10px;
+    left: 15%;
+}
+
+
+.title h2::before{
+    content: "";
+    position: absolute;
+    /* background-color: #FF2F5B; */
+    width: 40%;
+    height: 10px;
+    bottom: -15px;
+    left: 30%;
+    border-top: 1.5px solid #FF2F5B;
+    border-bottom: 1.5px solid #FF2F5B;
+}
+
+
+
+
+/* ^ clinets */
+.card{
+    background-color: #F1F1F1;
+    width: 60%;
+    height: 40vh;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.card::after{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #FF2F5B;
+    transform: rotate(45deg);
+    top: -150px;
+    left: -170px;
+    /* z-index: -1; */
+}
+
+
+.card .picture{
+    float: left;
+    width: 29%;
+    margin-right: 10px;
+    position: relative;
+    z-index: 1;
+}
+.card .picture img{
+    border-radius: 50%;
+    width: 70%;
+}
+.card .content{
+    float: right;
+    width: 69%;
+    text-align: left;
+    line-height: 30px
+}
+.card .content h3{
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 5px;
+
+}
+.card .content h4{
+    color: #555555;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.card .content p{
+    color: #555555;
+    font-weight: 400;
+    font-size: 18px;
+    /* margin-bottom: 20px; */
+    font-style: italic;
+    line-height: 25px;
+}
+
+.card .content .ratings{
+    color :#F1C30B;
+}
+
+.bullets{
+    width: 10%;
+    margin: 23px auto;
+    /* height: 15px; */
+
+}
+.bullets .circel{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #FF2F5B;
+    cursor: pointer;
+    display: inline-block;
+    margin-inline: 10px;
+}
+
+.bullets .elipce{
+    width: 40px;
+    height: 15px;
+    border-radius: 10px;
+    /* border: 1px solid #FF2F5B; */
+    background-color: #FF2F5B;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+
+#form{
+    margin-top: 40px;
+    padding-top: 40px;
+    background-color: #F1F1F1;
+}
+
+
+#form input{
+    display: block;
+    float: left;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    padding: 12px 12px;
+    margin: 10px 2.5%;
+}
+
+#form .half{
+    width: 45%; 
+}
+#form .full{
+    width: 95%;
+}
+#form textarea{
+    min-height: 100px;
+    padding: 12px 12px;
+    margin: 10px 2.5%;
+    width: 95%;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+#form button{
+    width: 160px;
+    padding: 12px 12px;
+    margin: 2.5%;
+    /* border: 1px solid #cccccc; */
+    border: none;
+    background-color: #FF2F5B;
+    color: white;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+#form button:hover{
+    background-color: #EC2403
+}
+
+
+
+
+#portolio{
+    background-color: #cccccc;
+    padding: 40px 0;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+ul li{
+    display: inline-block;
+    padding: 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    /* color: #FF2F5B; */
+}
+.container .item{
+    width: 33%;
+    float: left;
+    padding: 10px;
+    /* margin: 20px 10px; */
+}
+
+.container .item img{
+    width: 100%;
+}
+
+.container .item .inner{
+    position: relative;
+}
+.container .item .inner .layer{
+    width: 100%;
+    /* height: 100%; */
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+.container .item .inner .layer i{
+    font-size: 25px;
+    color: #FF2F5B;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+.container .item .inner:hover .layer{
+    opacity: 1;
+}
